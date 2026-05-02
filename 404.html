@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RCWE — Redirigiendo...</title>
+  <script>
+    var path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+    if (path) window.location.replace('/#' + path);
+    else window.location.replace('/');
+  </script>
+  <style>body{background:#050A05;color:#1A9E1A;font-family:monospace;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;}</style>
+</head>
+<body><p>$ redirect...</p></body>
+</html>
