@@ -3,10 +3,11 @@
  *  Rodo's Crappy Web Empire — Site Data
  * ============================================================
  *
- *  Todos los datos editables del portfolio están acá.
- *  Para agregar un proyecto, copiá un bloque en "projects".
- *  NO hace falta tocar index.html ni CSS/JS.
+ *  Strings bilingües:  { es: "...", en: "..." }
+ *  Strings técnicos (URLs, tags, names): string plano
  *
+ *  status: "live" | "beta" | "wip" | "archived"
+ *  featured: true → aparece en home
  * ============================================================
  */
 
@@ -15,40 +16,73 @@ var SITE_DATA = {
   config: {
     name: "Rodo's Crappy Web Empire",
     shortName: "RCWE",
-    domain: "rodoscrappywebempire.com",
+    domain: "rcwe.ragustingarcia.com",
     owner: "Rodolfo Agustín García",
+    portfolioUrl: "https://ragustingarcia.com/",
     github: "https://github.com/ragustingarcia",
     githubOrg: "https://github.com/RodosCrappyWebEmpire",
     githubHandle: "ragustingarcia",
-    tagline: "Una colección de aplicaciones web hechas con más entusiasmo que presupuesto.",
-    description: "Portfolio de proyectos web, herramientas, experimentos y cosas que probablemente deberían haber sido un email.",
+    tagline: {
+      es: "Una colección de aplicaciones web hechas con más entusiasmo que presupuesto.",
+      en: "A collection of web apps made with more enthusiasm than budget.",
+    },
+    description: {
+      es: "Portfolio de proyectos web, herramientas y experimentos del lado caótico. Todo lo que construyo cuando nadie me pide nada serio.",
+      en: "Portfolio of web projects, tools and experiments from the chaotic side. Everything I build when nobody asks me for anything serious.",
+    },
     contactEmail: "",
   },
 
   // ──────────────────────────────────────────
-  // Proyectos
-  // Para agregar uno nuevo, copiá un bloque y completá.
-  //   status: "live" | "beta" | "wip" | "archived"
-  //   tags: array de tecnologías o categorías
+  // Proyectos del imperio
   // ──────────────────────────────────────────
   projects: [
     {
       id: 1,
-      name: "Mareas Argentinas",
-      url: "https://mareas-argentinas.netlify.app/",
+      name: "El Códice del Tabernero",
+      url: "https://elcodicedeltabernero.netlify.app/",
       repo: "",
-      desc: "Nivel del Río de la Plata en tiempo real. Datos de mareas, alertas personalizadas, calendario de regatas 2026, integración con Telegram y canal push. PWA instalable.",
-      tags: ["PWA", "API", "Tiempo real", "Telegram"],
+      desc: {
+        es: "Criptógrafo polialfabético estilo Wheatstone para sesiones de D&D. Ruedas rotantes, clave embebida opcional, historial persistente y share sheet. PWA offline. 94 tests automáticos verifican la biyección del motor criptográfico.",
+        en: "Wheatstone-style polyalphabetic cipher for D&D sessions. Rotating wheels, optional embedded key, persistent history and share sheet. Offline PWA. 94 automated tests verify the bijection of the crypto engine.",
+      },
+      tags: ["PWA", "Vanilla JS", "Crypto", "D&D"],
+      status: "live",
+      featured: true,
+    },
+    {
+      id: 2,
+      name: "Los Dados del Tabernero",
+      url: "https://losdadosdeltabernero.netlify.app/",
+      repo: "",
+      desc: {
+        es: "Lanzador de dados D&D 5e con armado de mano (d4–d100), ventaja/desventaja visual, detección de crítico y pifia, tiradas guardadas y vibración háptica. PWA instalable, estética pixel art medieval.",
+        en: "D&D 5e dice roller with hand building (d4–d100), visual advantage/disadvantage, crit and fumble detection, saved rolls and haptic feedback. Installable PWA, medieval pixel art aesthetic.",
+      },
+      tags: ["PWA", "Vanilla JS", "D&D", "Pixel Art"],
+      status: "live",
+      featured: true,
+    },
+    {
+      id: 3,
+      name: "Sala de Mapas",
+      url: "https://lodte-sala-de-mapas.onrender.com/",
+      repo: "",
+      desc: {
+        es: "Mapas compartidos en tiempo real para D&D. El DM controla fog of war, POIs y tokens; los jugadores se conectan con un código de 4 letras desde cualquier dispositivo. WebSockets, MongoDB y Cloudinary.",
+        en: "Real-time shared maps for D&D. DM controls fog of war, POIs and tokens; players connect with a 4-letter room code from any device. WebSockets, MongoDB and Cloudinary.",
+      },
+      tags: ["Flask", "Socket.IO", "MongoDB", "Cloudinary", "D&D"],
       status: "live",
       featured: true,
     },
     // ── Agregá más proyectos copiando este bloque: ──
     // {
-    //   id: 2,
-    //   name: "Nombre del proyecto",
+    //   id: 4,
+    //   name: "Nombre",
     //   url: "https://...",
     //   repo: "https://github.com/...",
-    //   desc: "Descripción del proyecto...",
+    //   desc: { es: "...", en: "..." },
     //   tags: ["Tag1", "Tag2"],
     //   status: "live",
     //   featured: false,
@@ -56,15 +90,74 @@ var SITE_DATA = {
   ],
 
   // ──────────────────────────────────────────
-  // Secciones "Acerca de"
+  // Acerca de
   // ──────────────────────────────────────────
   about: {
-    bio: "Desarrollador, DM de D&D, y constructor compulsivo de herramientas web que nadie pidió pero que aparentemente necesitaban existir. Parte de La Orden del Tabernero Errante (LODTE).",
+    bio: {
+      es: "Desarrollador, DM de D&D y constructor compulsivo de herramientas web que nadie pidió pero que aparentemente necesitaban existir. Parte de La Orden del Tabernero Errante (LODTE). Para los proyectos serios, ver el portfolio principal.",
+      en: "Developer, D&D DM and compulsive builder of web tools nobody asked for but apparently needed to exist. Part of La Orden del Tabernero Errante (LODTE). For serious projects, see the main portfolio.",
+    },
     links: [
+      { label: "Portfolio principal", url: "https://ragustingarcia.com/", icon: ">" },
       { label: "GitHub", url: "https://github.com/ragustingarcia", icon: ">" },
-      { label: "GitHub Org", url: "https://github.com/RodosCrappyWebEmpire", icon: ">" },
+      { label: "GitHub Org (RCWE)", url: "https://github.com/RodosCrappyWebEmpire", icon: ">" },
       { label: "LODTE", url: "https://www.lodte.com.ar/", icon: ">" },
     ],
+  },
+
+  // ──────────────────────────────────────────
+  // Labels de UI (bilingüe)
+  // ──────────────────────────────────────────
+  ui: {
+    nav: {
+      back:     { es: "← portfolio", en: "← portfolio" },
+      home:     { es: "~/home",      en: "~/home" },
+      projects: { es: "~/projects",  en: "~/projects" },
+      about:    { es: "~/about",     en: "~/about" },
+    },
+    sections: {
+      featuredTitle: { es: "Proyectos destacados", en: "Featured projects" },
+      featuredSub:   { es: "Lo más reciente del imperio", en: "Latest from the empire" },
+      allTitle:      { es: "Proyectos",            en: "Projects" },
+      allSub: {
+        es: "todos los proyectos del imperio",
+        en: "all projects in the empire",
+      },
+      aboutTitle:    { es: "Acerca de",            en: "About" },
+      aboutSub:      { es: "whoami",               en: "whoami" },
+    },
+    buttons: {
+      seeProjects: { es: "ver proyectos",   en: "see projects" },
+      seeAll:      { es: "ver todos los proyectos", en: "see all projects" },
+      open:        { es: "[abrir",          en: "[open" },
+      repo:        { es: "[repo",           en: "[repo" },
+      github:      { es: "github",          en: "github" },
+    },
+    misc: {
+      project:     { es: "proyecto",  en: "project" },
+      projects:    { es: "proyectos", en: "projects" },
+      inEmpire:    { es: "en el imperio", en: "in the empire" },
+      addedNote: {
+        es: 'Para agregar un proyecto, editá content/site-data.js y copiá un bloque en "projects".',
+        en: 'To add a project, edit content/site-data.js and copy a block into "projects".',
+      },
+      tagline:     { es: "Hecho con más entusiasmo que presupuesto.", en: "Made with more enthusiasm than budget." },
+      readme:      { es: "$ cat README.md", en: "$ cat README.md" },
+      whoami:      { es: "$ whoami",        en: "$ whoami" },
+      links:       { es: "$ cat links.txt", en: "$ cat links.txt" },
+      noProjects:  { es: "$ ls projects/",  en: "$ ls projects/" },
+      noProjectsHint: { es: "No hay proyectos todavía. Agregá uno en content/site-data.js", en: "No projects yet. Add one in content/site-data.js" },
+      footerNote: {
+        es: "// Sitio estático: HTML + CSS + JS vanilla.\n// Hosteado en GitHub Pages, gratis, sin frameworks.\n// Todo el contenido se edita desde content/site-data.js\n// Porque a veces lo simple es suficiente.",
+        en: "// Static site: HTML + CSS + vanilla JS.\n// Hosted on GitHub Pages, free, no frameworks.\n// All content lives in content/site-data.js\n// Because sometimes simple is enough.",
+      },
+    },
+    status: {
+      live:     { es: "LIVE",      en: "LIVE" },
+      beta:     { es: "BETA",      en: "BETA" },
+      wip:      { es: "WIP",       en: "WIP" },
+      archived: { es: "ARCHIVED",  en: "ARCHIVED" },
+    },
   },
 
 };

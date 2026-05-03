@@ -6,73 +6,87 @@
 
 ## Qué es esto
 
-Portfolio personal de **Rodolfo Agustín García** — un catálogo de proyectos web, herramientas, experimentos y cosas que probablemente deberían haber sido un email.
+Catálogo de proyectos del lado caótico — herramientas, experimentos y cosas que probablemente deberían haber sido un email. El B-side de mi portfolio principal.
 
-🌐 **[www.rodoscrappywebempire.com](https://www.rodoscrappywebempire.com/)**
+🌐 **[rcwe.ragustingarcia.com](https://rcwe.ragustingarcia.com/)**
+🔗 Portfolio principal: **[ragustingarcia.com](https://ragustingarcia.com/)**
 
 ---
 
 ## Estructura
 
 ```
-rcwe/
-├── index.html              ← Página principal
-├── 404.html                ← Redirección para GitHub Pages
-├── CNAME                   ← Dominio personalizado (NO MODIFICAR)
+RodosCrappyWebEmpire/
+├── index.html                  ← shell + meta + noscript
+├── 404.html                    ← redirect para GitHub Pages
+├── CNAME                       ← NO MODIFICAR (rcwe.ragustingarcia.com)
 ├── content/
-│   └── site-data.js        ← ✏️ TODOS los datos editables
+│   └── site-data.js            ← ✏️ TODOS los datos editables
 ├── assets/
-│   ├── css/styles.css      ← Estilos (terminal retro)
-│   └── js/app.js           ← Motor del sitio
+│   ├── css/styles.css          ← terminal verde fósforo + ámbar
+│   └── js/app.js               ← motor + i18n
 └── README.md
 ```
 
----
+## Cómo editar contenido
 
-## Cómo agregar un proyecto
+Todo lo editable vive en **`content/site-data.js`**. No hace falta tocar HTML, CSS ni JS.
 
-Abrí `content/site-data.js`, buscá `projects` y agregá un bloque:
+### Strings bilingües
 
-```javascript
+Cada string visible se escribe como `{ es: "...", en: "..." }`. El motor (`app.js`) renderiza según el idioma activo (toggle `ES / EN` en navbar). Los strings técnicos (URLs, tags, nombres) se escriben planos.
+
+```js
+tagline: {
+  es: "Una colección de aplicaciones web hechas con más entusiasmo que presupuesto.",
+  en: "A collection of web apps made with more enthusiasm than budget.",
+}
+```
+
+### Agregar un proyecto
+
+Copiá un bloque dentro de `projects`:
+
+```js
 {
-  id: 2,
+  id: 4,
   name: "Nombre del proyecto",
   url: "https://...",
   repo: "https://github.com/...",
-  desc: "Descripción del proyecto...",
+  desc: { es: "Descripción ES...", en: "Description EN..." },
   tags: ["Tag1", "Tag2"],
-  status: "live",    // live | beta | wip | archived
-  featured: false,
+  status: "live",     // live | beta | wip | archived
+  featured: false,    // true → aparece destacado en home
 },
 ```
 
-Pusheá y listo.
+## Proyectos del imperio
 
----
-
-## Proyectos
+Tools del ecosistema **[LODTE — La Orden del Tabernero Errante](https://www.lodte.com.ar/)**:
 
 | Proyecto | Descripción | Link |
-|----------|-------------|------|
-| 🌊 **Mareas Argentinas** | Nivel del Río de la Plata en tiempo real | [mareas-argentinas.netlify.app](https://mareas-argentinas.netlify.app/) |
-
----
+| --- | --- | --- |
+| 🗝 **El Códice del Tabernero** | Cifrado polialfabético para D&D | [elcodicedeltabernero.netlify.app](https://elcodicedeltabernero.netlify.app/) |
+| 🎲 **Los Dados del Tabernero** | Lanzador de dados D&D 5e | [losdadosdeltabernero.netlify.app](https://losdadosdeltabernero.netlify.app/) |
+| 🗺️ **Sala de Mapas** | Mapas compartidos en tiempo real | [lodte-sala-de-mapas.onrender.com](https://lodte-sala-de-mapas.onrender.com/) |
 
 ## Stack
 
-- HTML5 + CSS3 + JavaScript vanilla
-- GitHub Pages (hosting gratuito)
-- Cloudflare (DNS)
-- Cero frameworks, cero build steps
-- Estética: terminal retro
+HTML5 + CSS3 + JS vanilla · GitHub Pages · Cloudflare DNS · Sin frameworks · Sin build step · Estética terminal retro
 
----
+## i18n — cómo funciona
 
-## Importante
+- Idioma se persiste en `localStorage` (clave `rcwe-lang`)
+- Sincroniza con la principal: cuando el usuario cambia idioma acá, también escribe `rag-lang` (la clave que usa `ragustingarcia.com`). Si después navega a la principal, mantiene su elección.
+- Detección inicial: `localStorage` → idioma del browser → fallback `es`
+- Cambia dinámicamente `<html lang>`, `<title>` y `meta description`
 
-> ⚠️ **NO MODIFICAR NI ELIMINAR el archivo `CNAME`.**
+## Cross-linking con el portfolio principal
 
-Conecta el repo con el dominio personalizado via Cloudflare.
+- **Navbar (izquierda del brand)**: link `← portfolio` que vuelve a `ragustingarcia.com`
+- **Footer**: link `portfolio` antes de los demás
+- **JSON-LD**: este sitio se declara `isPartOf` del portfolio principal (señal explícita a Google)
+- **About**: la primera link es "Portfolio principal"
 
 ---
 
@@ -81,5 +95,7 @@ Conecta el repo con el dominio personalizado via Cloudflare.
 Parte de **[La Orden del Tabernero Errante](https://www.lodte.com.ar/)** — campañas, crónicas y mundos compartidos de Calabozos y Dragones.
 
 ---
+
+⚠️ **No modificar ni eliminar `CNAME`** — conecta el repo con `rcwe.ragustingarcia.com` vía Cloudflare.
 
 *Hecho con más entusiasmo que presupuesto.*

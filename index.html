@@ -7,16 +7,18 @@
 
   <title>Rodo's Crappy Web Empire</title>
   <meta name="description" content="Portfolio de proyectos web de Rodolfo García. Una colección de aplicaciones hechas con más entusiasmo que presupuesto." />
-  <meta name="keywords" content="portfolio, web, desarrollo, proyectos, Rodolfo García, Mareas Argentinas, herramientas, apps" />
+  <meta name="keywords" content="portfolio, web, desarrollo, proyectos, Rodolfo García, LODTE, D&D, herramientas, apps" />
   <meta name="author" content="Rodolfo Agustín García" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.rodoscrappywebempire.com/" />
+  <link rel="canonical" href="https://rcwe.ragustingarcia.com/" />
 
+  <!-- Open Graph (FIX: canonical real domain rcwe.ragustingarcia.com) -->
   <meta property="og:title" content="Rodo's Crappy Web Empire" />
   <meta property="og:description" content="Una colección de aplicaciones web hechas con más entusiasmo que presupuesto." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.rodoscrappywebempire.com/" />
+  <meta property="og:url" content="https://rcwe.ragustingarcia.com/" />
   <meta property="og:locale" content="es_AR" />
+  <meta property="og:locale:alternate" content="en_US" />
   <meta property="og:site_name" content="Rodo's Crappy Web Empire" />
 
   <meta name="twitter:card" content="summary" />
@@ -31,13 +33,17 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Rodo's Crappy Web Empire",
-    "url": "https://www.rodoscrappywebempire.com",
+    "url": "https://rcwe.ragustingarcia.com",
     "author": {
       "@type": "Person",
       "name": "Rodolfo Agustín García",
-      "url": "https://github.com/ragustingarcia"
+      "url": "https://ragustingarcia.com"
     },
-    "description": "Portfolio de proyectos web. Una colección de aplicaciones hechas con más entusiasmo que presupuesto."
+    "description": "Portfolio de proyectos web. Una colección de aplicaciones hechas con más entusiasmo que presupuesto.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "url": "https://ragustingarcia.com"
+    }
   }
   </script>
 
@@ -56,10 +62,20 @@
   </div>
 
   <noscript>
-    <div style="padding:60px 20px;text-align:center;">
+    <div style="padding:60px 20px;text-align:center;max-width:640px;margin:0 auto;">
       <h1 style="color:#33FF33;font-family:monospace;">Rodo's Crappy Web Empire</h1>
-      <p style="color:#77BB77;margin-top:16px;">Este sitio requiere JavaScript.</p>
-      <p style="color:#4A7A4A;margin-top:24px;"><a href="https://github.com/RodosCrappyWebEmpire" style="color:#33FF33;">Ver en GitHub</a></p>
+      <p style="color:#77BB77;margin-top:8px;">Una colección de apps hechas con más entusiasmo que presupuesto.</p>
+      <hr style="border:none;border-top:1px solid #1A3A1A;margin:32px 0;" />
+      <p style="color:#77BB77;margin-bottom:8px;">Proyectos:</p>
+      <ul style="list-style:none;padding:0;color:#CCFFCC;line-height:2;">
+        <li><a href="https://elcodicedeltabernero.netlify.app/" style="color:#33FF33;">El Códice del Tabernero</a> — cifrado D&D</li>
+        <li><a href="https://losdadosdeltabernero.netlify.app/" style="color:#33FF33;">Los Dados del Tabernero</a> — lanzador 5e</li>
+        <li><a href="https://lodte-sala-de-mapas.onrender.com/" style="color:#33FF33;">Sala de Mapas</a> — mapas en vivo</li>
+      </ul>
+      <p style="color:#4A7A4A;margin-top:32px;">
+        <a href="https://ragustingarcia.com/" style="color:#33FF33;">← portfolio principal</a> ·
+        <a href="https://github.com/RodosCrappyWebEmpire" style="color:#33FF33;">GitHub</a>
+      </p>
     </div>
   </noscript>
 

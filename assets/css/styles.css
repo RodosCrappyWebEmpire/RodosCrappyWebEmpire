@@ -2,6 +2,9 @@
  *  Rodo's Crappy Web Empire — Styles
  *  Aesthetic: Retro Terminal / Hacker Ironic
  *  Palette: Phosphor green, amber accents, deep black
+ *  Notes:
+ *    - Adds back-link to main portfolio
+ *    - Adds lang toggle (ES/EN)
  * ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap');
@@ -77,13 +80,26 @@ a:hover { color: var(--amber); text-decoration: underline; }
 .navbar-inner {
   max-width: 860px; margin: 0 auto; padding: 0 24px;
   display: flex; align-items: center; justify-content: space-between; height: 50px;
+  gap: 14px;
 }
+.navbar-left  { display: flex; align-items: center; gap: 12px; }
+.navbar-right { display: flex; align-items: center; gap: 14px; }
+
+.navbar-back {
+  font-family: var(--font-mono); font-size: 11px; color: var(--text-faint);
+  text-decoration: none; letter-spacing: 1px;
+  padding: 4px 8px; border: 1px solid var(--border);
+  transition: all 0.15s;
+}
+.navbar-back:hover { color: var(--amber); border-color: var(--amber-dim); text-decoration: none; }
+
 .navbar-brand {
   font-family: var(--font-display); font-size: 13px; font-weight: 700;
   color: var(--green); background: none; border: none; cursor: pointer;
   text-decoration: none;
 }
 .navbar-brand:hover { color: var(--amber); text-decoration: none; }
+
 .navbar-links { display: flex; gap: 6px; }
 .navbar-link {
   color: var(--text-dim); background: none; border: none; cursor: pointer;
@@ -91,6 +107,20 @@ a:hover { color: var(--amber); text-decoration: underline; }
   transition: all 0.15s; text-decoration: none;
 }
 .navbar-link:hover, .navbar-link.active { color: var(--green); background: var(--bg-hover); text-decoration: none; }
+
+/* ── Lang toggle ── */
+.lang-toggle {
+  display: inline-flex; align-items: center;
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 1px;
+  border: 1px solid var(--border);
+}
+.lang-toggle button {
+  background: none; border: none; color: var(--text-faint);
+  font-family: inherit; font-size: inherit; letter-spacing: inherit;
+  padding: 4px 8px; cursor: pointer; transition: all 0.15s;
+}
+.lang-toggle button:hover { color: var(--text-dim); }
+.lang-toggle button.active { color: var(--bg); background: var(--green); }
 
 .navbar-mobile-btn {
   display: none; background: none; border: 1px solid var(--border);
@@ -156,16 +186,14 @@ a:hover { color: var(--amber); text-decoration: underline; }
   padding: 20px 24px; margin-bottom: 12px;
   transition: all 0.2s; position: relative;
 }
-.project-card:hover {
-  border-color: var(--green-faint); background: var(--bg-hover);
-}
+.project-card:hover { border-color: var(--green-faint); background: var(--bg-hover); }
 .project-card.featured { border-left: 3px solid var(--green); }
 .project-name {
   font-family: var(--font-display); font-size: 15px; font-weight: 700;
   color: var(--green); margin-bottom: 4px;
 }
 .project-desc {
-  font-size: 13px; color: var(--text-dim); line-height: 1.6; margin-bottom: 12px;
+  font-size: 13px; color: var(--text-dim); line-height: 1.7; margin-bottom: 12px;
 }
 .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .tag {
@@ -182,9 +210,9 @@ a:hover { color: var(--amber); text-decoration: underline; }
   font-size: 10px; font-family: var(--font-mono); padding: 2px 8px;
   text-transform: uppercase; letter-spacing: 1px;
 }
-.status-live { color: var(--green); border: 1px solid var(--green-faint); }
-.status-beta { color: var(--amber); border: 1px solid var(--amber-dim); }
-.status-wip { color: var(--text-faint); border: 1px solid var(--border); }
+.status-live     { color: var(--green);      border: 1px solid var(--green-faint); }
+.status-beta     { color: var(--amber);      border: 1px solid var(--amber-dim); }
+.status-wip      { color: var(--text-faint); border: 1px solid var(--border); }
 .status-archived { color: var(--text-faint); border: 1px dashed var(--border); }
 
 /* ── About ── */
@@ -205,9 +233,7 @@ a:hover { color: var(--amber); text-decoration: underline; }
   border-top: 1px solid var(--border);
   padding: 24px 0; text-align: center;
 }
-.footer p {
-  font-size: 11px; color: var(--text-faint); line-height: 1.8;
-}
+.footer p { font-size: 11px; color: var(--text-faint); line-height: 1.8; }
 .footer a { color: var(--green-faint); }
 .footer a:hover { color: var(--green); }
 
@@ -243,14 +269,16 @@ a:hover { color: var(--amber); text-decoration: underline; }
 .text-green { color: var(--green); }
 
 /* ── Responsive ── */
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   .navbar-links { display: none !important; }
   .navbar-mobile-btn { display: block !important; }
+  .navbar-back { font-size: 10px; padding: 3px 6px; }
+  .navbar-inner { gap: 8px; }
   .hero { padding-top: 80px; }
   .hero h1 { font-size: 24px; }
   .project-card { padding: 16px; }
 }
-@media (min-width: 641px) {
+@media (min-width: 721px) {
   .navbar-mobile-btn { display: none !important; }
   .navbar-mobile-menu { display: none !important; }
 }
