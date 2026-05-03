@@ -4,10 +4,6 @@
 
 ---
 
-## Qué es esto
-
-Catálogo de proyectos del lado caótico — herramientas, experimentos y cosas que probablemente deberían haber sido un email. El B-side de mi portfolio principal.
-
 🌐 **[rcwe.ragustingarcia.com](https://rcwe.ragustingarcia.com/)**
 🔗 Portfolio principal: **[ragustingarcia.com](https://ragustingarcia.com/)**
 
@@ -26,13 +22,8 @@ RodosCrappyWebEmpire/
 ├── assets/
 │   ├── css/styles.css
 │   ├── js/app.js               ← motor + i18n
+│   ├── og-image.png            ← preview al compartir (1200×630)
 │   └── favicon/                ← favicons + iconos PWA
-│       ├── favicon.ico
-│       ├── favicon-16.png
-│       ├── favicon-32.png
-│       ├── apple-touch-icon.png  (512×512)
-│       ├── icon-192.png          (PWA)
-│       └── icon-512.png          (PWA)
 └── README.md
 ```
 
@@ -78,36 +69,47 @@ Tools del ecosistema **[LODTE — La Orden del Tabernero Errante](https://www.lo
 
 HTML5 + CSS3 + JS vanilla · GitHub Pages · Cloudflare DNS · Sin frameworks · Sin build step · Estética terminal retro
 
-## Favicon e iconos PWA
-
-El branding visual es el logo "RCWE://" en tipografía limpia verde fósforo. Archivos en `/assets/favicon/`:
+## Imágenes / branding
 
 | Archivo | Uso |
 | --- | --- |
-| `favicon.ico` | Multi-size (16, 32, 48) — fallback universal |
-| `favicon-16.png` / `favicon-32.png` | Favicons modernos PNG |
-| `apple-touch-icon.png` (512×512) | iOS Safari |
-| `icon-192.png` / `icon-512.png` | Iconos PWA |
+| `assets/favicon/favicon.ico` y PNGs | favicons del browser |
+| `assets/favicon/apple-touch-icon.png` | iOS Safari |
+| `assets/favicon/icon-192.png` / `icon-512.png` | iconos PWA |
+| `assets/og-image.png` | preview al compartir en WhatsApp / LinkedIn / Twitter (1200×630) |
 
 ## i18n — cómo funciona
 
-- Idioma se persiste en `localStorage` (clave `rcwe-lang`)
-- Sincroniza con la principal: cuando cambia idioma acá, también escribe `rag-lang`. Si después navega a la principal, mantiene su elección.
-- Detección inicial: `localStorage` → idioma del browser → fallback `es`
+- Idioma persiste en `localStorage` (clave `rcwe-lang`)
+- Sincroniza con la principal vía la clave compartida `rag-lang`
 - Cambia dinámicamente `<html lang>`, `<title>` y `meta description`
 
 ## Cross-linking con el portfolio principal
 
-- **Navbar (izquierda del brand)**: link `← portfolio` que vuelve a `ragustingarcia.com`
+- **Navbar (izquierda del brand)**: link `← portfolio` → `ragustingarcia.com`
 - **Footer**: link `portfolio` antes de los demás
 - **JSON-LD**: este sitio se declara `isPartOf` del portfolio principal
 - **About**: la primera link es "Portfolio principal"
+
+## SEO
+
+- `canonical` apuntando a `https://rcwe.ragustingarcia.com/`
+- Open Graph (`og:image` 1200×630) + Twitter Card (`summary_large_image`)
+- `<noscript>` con lista de proyectos para crawlers sin JS
+
+### Validar previews al compartir
+
+- **Facebook / WhatsApp**: [developers.facebook.com/tools/debug](https://developers.facebook.com/tools/debug/) — "Scrape Again" para refrescar cache
+- **LinkedIn**: [linkedin.com/post-inspector](https://www.linkedin.com/post-inspector/)
+- **Twitter / X**: [cards-dev.twitter.com/validator](https://cards-dev.twitter.com/validator)
+
+WhatsApp puede tardar 24–48hs en limpiar el cache. Para forzar refresh inmediato, agregá `?v=2` al final de la URL al pegarla.
 
 ---
 
 ## También
 
-Parte de **[La Orden del Tabernero Errante](https://www.lodte.com.ar/)** — campañas, crónicas y mundos compartidos de Calabozos y Dragones.
+Parte de **[La Orden del Tabernero Errante](https://www.lodte.com.ar/)** — campañas y crónicas de D&D.
 
 ---
 
