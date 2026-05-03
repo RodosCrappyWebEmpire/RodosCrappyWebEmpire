@@ -17,24 +17,30 @@ Catálogo de proyectos del lado caótico — herramientas, experimentos y cosas 
 
 ```
 RodosCrappyWebEmpire/
-├── index.html                  ← shell + meta + noscript
-├── 404.html                    ← redirect para GitHub Pages
-├── CNAME                       ← NO MODIFICAR (rcwe.ragustingarcia.com)
+├── index.html
+├── 404.html
+├── CNAME                       ← NO MODIFICAR
+├── site.webmanifest            ← PWA manifest
 ├── content/
-│   └── site-data.js            ← ✏️ TODOS los datos editables
+│   └── site-data.js            ← ✏️ Datos editables
 ├── assets/
-│   ├── css/styles.css          ← terminal verde fósforo + ámbar
-│   └── js/app.js               ← motor + i18n
+│   ├── css/styles.css
+│   ├── js/app.js               ← motor + i18n
+│   └── favicon/                ← favicons + iconos PWA
+│       ├── favicon.ico
+│       ├── favicon-16.png
+│       ├── favicon-32.png
+│       ├── apple-touch-icon.png  (512×512)
+│       ├── icon-192.png          (PWA)
+│       └── icon-512.png          (PWA)
 └── README.md
 ```
 
 ## Cómo editar contenido
 
-Todo lo editable vive en **`content/site-data.js`**. No hace falta tocar HTML, CSS ni JS.
+Todo lo editable vive en **`content/site-data.js`**.
 
 ### Strings bilingües
-
-Cada string visible se escribe como `{ es: "...", en: "..." }`. El motor (`app.js`) renderiza según el idioma activo (toggle `ES / EN` en navbar). Los strings técnicos (URLs, tags, nombres) se escriben planos.
 
 ```js
 tagline: {
@@ -45,18 +51,16 @@ tagline: {
 
 ### Agregar un proyecto
 
-Copiá un bloque dentro de `projects`:
-
 ```js
 {
   id: 4,
   name: "Nombre del proyecto",
   url: "https://...",
   repo: "https://github.com/...",
-  desc: { es: "Descripción ES...", en: "Description EN..." },
+  desc: { es: "Descripción ES", en: "Description EN" },
   tags: ["Tag1", "Tag2"],
   status: "live",     // live | beta | wip | archived
-  featured: false,    // true → aparece destacado en home
+  featured: false,    // true → destacado en home
 },
 ```
 
@@ -74,10 +78,21 @@ Tools del ecosistema **[LODTE — La Orden del Tabernero Errante](https://www.lo
 
 HTML5 + CSS3 + JS vanilla · GitHub Pages · Cloudflare DNS · Sin frameworks · Sin build step · Estética terminal retro
 
+## Favicon e iconos PWA
+
+El branding visual es el logo "RCWE://" en tipografía limpia verde fósforo. Archivos en `/assets/favicon/`:
+
+| Archivo | Uso |
+| --- | --- |
+| `favicon.ico` | Multi-size (16, 32, 48) — fallback universal |
+| `favicon-16.png` / `favicon-32.png` | Favicons modernos PNG |
+| `apple-touch-icon.png` (512×512) | iOS Safari |
+| `icon-192.png` / `icon-512.png` | Iconos PWA |
+
 ## i18n — cómo funciona
 
 - Idioma se persiste en `localStorage` (clave `rcwe-lang`)
-- Sincroniza con la principal: cuando el usuario cambia idioma acá, también escribe `rag-lang` (la clave que usa `ragustingarcia.com`). Si después navega a la principal, mantiene su elección.
+- Sincroniza con la principal: cuando cambia idioma acá, también escribe `rag-lang`. Si después navega a la principal, mantiene su elección.
 - Detección inicial: `localStorage` → idioma del browser → fallback `es`
 - Cambia dinámicamente `<html lang>`, `<title>` y `meta description`
 
@@ -85,7 +100,7 @@ HTML5 + CSS3 + JS vanilla · GitHub Pages · Cloudflare DNS · Sin frameworks ·
 
 - **Navbar (izquierda del brand)**: link `← portfolio` que vuelve a `ragustingarcia.com`
 - **Footer**: link `portfolio` antes de los demás
-- **JSON-LD**: este sitio se declara `isPartOf` del portfolio principal (señal explícita a Google)
+- **JSON-LD**: este sitio se declara `isPartOf` del portfolio principal
 - **About**: la primera link es "Portfolio principal"
 
 ---

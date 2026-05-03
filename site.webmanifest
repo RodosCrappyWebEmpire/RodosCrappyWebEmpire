@@ -1,0 +1,27 @@
+{
+  "name": "Rodo's Crappy Web Empire",
+  "short_name": "RCWE",
+  "description": "Una colección de aplicaciones web hechas con más entusiasmo que presupuesto.",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "background_color": "#050A05",
+  "theme_color": "#050A05",
+  "icons": [
+    {
+      "src": "/assets/favicon/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
