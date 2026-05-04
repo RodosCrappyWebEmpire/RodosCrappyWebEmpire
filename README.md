@@ -16,6 +16,8 @@ RodosCrappyWebEmpire/
 ├── index.html
 ├── 404.html
 ├── CNAME                       ← NO MODIFICAR
+├── robots.txt                  ← reglas para crawlers
+├── sitemap.xml                 ← lista de URLs para Google
 ├── site.webmanifest            ← PWA manifest
 ├── content/
 │   └── site-data.js            ← ✏️ Datos editables
@@ -69,14 +71,36 @@ Tools del ecosistema **[LODTE — La Orden del Tabernero Errante](https://www.lo
 
 HTML5 + CSS3 + JS vanilla · GitHub Pages · Cloudflare DNS · Sin frameworks · Sin build step · Estética terminal retro
 
-## Imágenes / branding
+## SEO
 
-| Archivo | Uso |
-| --- | --- |
-| `assets/favicon/favicon.ico` y PNGs | favicons del browser |
-| `assets/favicon/apple-touch-icon.png` | iOS Safari |
-| `assets/favicon/icon-192.png` / `icon-512.png` | iconos PWA |
-| `assets/og-image.png` | preview al compartir en WhatsApp / LinkedIn / Twitter (1200×630) |
+### `robots.txt` y `sitemap.xml`
+
+Le dicen a Google qué indexar y dónde encontrarlo. Como el sitio es SPA (una sola URL real con hash routes), el sitemap lista solo la home.
+
+**Después del primer deploy, registrar en Google Search Console**:
+1. Ir a [search.google.com/search-console](https://search.google.com/search-console)
+2. Agregar property `https://rcwe.ragustingarcia.com/`
+3. Verificar (lo más fácil: subir un meta tag al `<head>` de `index.html`)
+4. En "Sitemaps", agregar `sitemap.xml`
+
+### Otros elementos SEO
+
+- **JSON-LD** con `isPartOf` apuntando al portfolio principal (señal explícita a Google de que es parte del mismo ecosistema)
+- **Open Graph** (`og:image` 1200×630) + Twitter Card
+- **`canonical`** apuntando a `https://rcwe.ragustingarcia.com/`
+- **`<noscript>`** con lista de proyectos para crawlers sin JS
+
+## Cache busting
+
+Los `<script>` y `<link>` tienen un parámetro `?v=YYYY.MM.DDx` para forzar al browser a re-bajar archivos cuando hay cambios:
+
+```html
+<link rel="stylesheet" href="assets/css/styles.css?v=2026.05.04a" />
+<script src="content/site-data.js?v=2026.05.04a"></script>
+<script src="assets/js/app.js?v=2026.05.04a"></script>
+```
+
+**Cuando hagas cambios significativos en JS o CSS**, "bumpeá" la versión en `index.html` (ej. de `2026.05.04a` a `2026.05.04b`). Eso garantiza que los visitantes existentes no queden con caché vieja.
 
 ## i18n — cómo funciona
 
@@ -90,20 +114,6 @@ HTML5 + CSS3 + JS vanilla · GitHub Pages · Cloudflare DNS · Sin frameworks ·
 - **Footer**: link `portfolio` antes de los demás
 - **JSON-LD**: este sitio se declara `isPartOf` del portfolio principal
 - **About**: la primera link es "Portfolio principal"
-
-## SEO
-
-- `canonical` apuntando a `https://rcwe.ragustingarcia.com/`
-- Open Graph (`og:image` 1200×630) + Twitter Card (`summary_large_image`)
-- `<noscript>` con lista de proyectos para crawlers sin JS
-
-### Validar previews al compartir
-
-- **Facebook / WhatsApp**: [developers.facebook.com/tools/debug](https://developers.facebook.com/tools/debug/) — "Scrape Again" para refrescar cache
-- **LinkedIn**: [linkedin.com/post-inspector](https://www.linkedin.com/post-inspector/)
-- **Twitter / X**: [cards-dev.twitter.com/validator](https://cards-dev.twitter.com/validator)
-
-WhatsApp puede tardar 24–48hs en limpiar el cache. Para forzar refresh inmediato, agregá `?v=2` al final de la URL al pegarla.
 
 ---
 

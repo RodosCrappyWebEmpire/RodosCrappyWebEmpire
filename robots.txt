@@ -1,0 +1,6 @@
+# https://rcwe.ragustingarcia.com/robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://rcwe.ragustingarcia.com/sitemap.xml
