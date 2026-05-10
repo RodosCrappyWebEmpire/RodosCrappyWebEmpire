@@ -1,0 +1,48 @@
+# Rodo's Crappy Web Empire (RCWE)
+
+> A collection of experimental and playful web tools, primarily built around the LODTE (La Orden del Tabernero Errante) D&D campaign ecosystem.
+> Side project hub of [Rodolfo Agustín García](https://ragustingarcia.com/).
+> Tagline: "Made with more enthusiasm than budget."
+
+This is the LLM-friendly version of [rcwe.ragustingarcia.com](https://rcwe.ragustingarcia.com/), formatted in Markdown for easy parsing by AI assistants.
+
+## About
+
+Rodo's Crappy Web Empire (RCWE) is the experimental side of Rodolfo Agustín García's portfolio. The main portfolio at [ragustingarcia.com](https://ragustingarcia.com/) hosts production projects with real users; RCWE hosts side projects, experiments, and tools made for fun.
+
+The current focus is on tooling for **LODTE — La Orden del Tabernero Errante**, a D&D (Dungeons & Dragons) campaign ecosystem. See [lodte.com.ar](https://www.lodte.com.ar/) for the broader LODTE world.
+
+## Projects
+
+### El Códice del Tabernero
+Polyalphabetic cipher tool for D&D campaigns. Lets dungeon masters create encoded messages for their players to decipher in-game.
+- Status: live
+- Link: https://elcodicedeltabernero.netlify.app/
+- Stack: HTML/CSS/JavaScript (vanilla)
+
+### Los Dados del Tabernero
+D&D 5e dice roller. Supports standard D&D dice notation (1d20, 4d6kh3, etc.) with rolling history and customization.
+- Status: live
+- Link: https://losdadosdeltabernero.netlify.app/
+- Stack: HTML/CSS/JavaScript (vanilla)
+
+### Sala de Mapas
+Real-time shared map viewer for D&D sessions. Multiple players can connect and see the same map updated live by the dungeon master.
+- Status: live
+- Link: https://lodte-sala-de-mapas.onrender.com/
+- Stack: Python, Flask, SocketIO, MongoDB, Cloudinary
+
+## Connection to main portfolio
+
+This site is part of [ragustingarcia.com](https://ragustingarcia.com/). The main portfolio shows production projects (commercial / professional); RCWE shows the experimental side (creative / playful). Both are made by the same person.
+
+## Contact
+
+For inquiries, use the contact form on the main portfolio: https://ragustingarcia.com/#contact
+
+## Source files
+
+- Sitemap: https://rcwe.ragustingarcia.com/sitemap.xml
+- robots.txt: https://rcwe.ragustingarcia.com/robots.txt
+- AI usage policy: https://rcwe.ragustingarcia.com/ai.txt
+- Main portfolio: https://ragustingarcia.com/

@@ -1,0 +1,18 @@
+# https://rcwe.ragustingarcia.com/ai.txt
+#
+# Declaration of AI usage permissions.
+# Last updated: 2026-05-10
+
+User-Agent: *
+
+Allow: search
+Allow: cite
+Allow: summarize
+Allow: train
+
+# Conditions:
+# - Identification required: bots must use a recognizable user-agent
+# - Attribution required: when citing, attribution to the original
+#   source (https://rcwe.ragustingarcia.com) is expected
+
+Contact: https://ragustingarcia.com/#contact

@@ -43,23 +43,71 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Rodo's Crappy Web Empire",
-    "url": "https://rcwe.ragustingarcia.com",
-    "author": {
-      "@type": "Person",
-      "name": "Rodolfo Agustín García",
-      "url": "https://ragustingarcia.com"
-    },
-    "description": "Portfolio de proyectos web. Una colección de aplicaciones hechas con más entusiasmo que presupuesto.",
-    "isPartOf": {
-      "@type": "WebSite",
-      "url": "https://ragustingarcia.com"
-    }
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://rcwe.ragustingarcia.com/#website",
+        "url": "https://rcwe.ragustingarcia.com/",
+        "name": "Rodo's Crappy Web Empire",
+        "alternateName": "RCWE",
+        "description": "A collection of experimental web tools, primarily built around the LODTE (La Orden del Tabernero Errante) D&D campaign ecosystem.",
+        "inLanguage": ["es-AR", "en-US"],
+        "isPartOf": {
+          "@type": "WebSite",
+          "url": "https://ragustingarcia.com/",
+          "name": "Rodolfo Agustín García"
+        },
+        "author": { "@id": "https://ragustingarcia.com/#person" },
+        "publisher": { "@id": "https://ragustingarcia.com/#person" }
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://rcwe.ragustingarcia.com/#projects",
+        "name": "Side projects in Rodo's Crappy Web Empire",
+        "itemListOrder": "https://schema.org/ItemListUnordered",
+        "numberOfItems": 3,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-codice" } },
+          { "@type": "ListItem", "position": 2, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-dados" } },
+          { "@type": "ListItem", "position": 3, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-mapas" } }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://rcwe.ragustingarcia.com/#project-codice",
+        "name": "El Códice del Tabernero",
+        "description": "Polyalphabetic cipher tool for D&D campaigns. Lets dungeon masters create encoded messages for their players to decipher in-game.",
+        "url": "https://elcodicedeltabernero.netlify.app/",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web",
+        "author": { "@id": "https://ragustingarcia.com/#person" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://rcwe.ragustingarcia.com/#project-dados",
+        "name": "Los Dados del Tabernero",
+        "description": "D&D 5e dice roller. Supports standard dice notation with rolling history.",
+        "url": "https://losdadosdeltabernero.netlify.app/",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web",
+        "author": { "@id": "https://ragustingarcia.com/#person" }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://rcwe.ragustingarcia.com/#project-mapas",
+        "name": "Sala de Mapas",
+        "description": "Real-time shared map viewer for D&D sessions. Multiple players can connect and see the same map updated live by the dungeon master.",
+        "url": "https://lodte-sala-de-mapas.onrender.com/",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web",
+        "author": { "@id": "https://ragustingarcia.com/#person" },
+        "programmingLanguage": ["Python", "JavaScript"]
+      }
+    ]
   }
   </script>
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.05.04a" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.05.10" />
 
   <noscript>
     <style>body{background:#050A05;color:#CCFFCC;font-family:monospace;padding:40px;}</style>
@@ -74,25 +122,75 @@
   </div>
 
   <noscript>
-    <div style="padding:60px 20px;text-align:center;max-width:640px;margin:0 auto;">
-      <h1 style="color:#33FF33;font-family:monospace;">Rodo's Crappy Web Empire</h1>
-      <p style="color:#77BB77;margin-top:8px;">Una colección de apps hechas con más entusiasmo que presupuesto.</p>
+    <article style="padding:60px 20px;max-width:760px;margin:0 auto;">
+
+      <header style="text-align:center;margin-bottom:48px;">
+        <h1 style="color:#33FF33;font-family:monospace;letter-spacing:2px;font-size:24px;">RODO'S CRAPPY WEB EMPIRE</h1>
+        <p style="color:#77BB77;margin-top:8px;font-family:monospace;letter-spacing:2px;font-size:13px;">RCWE :: side projects lab</p>
+        <p style="color:#CCFFCC;margin-top:24px;line-height:1.7;font-size:18px;">Una colección de aplicaciones web hechas con más entusiasmo que presupuesto.</p>
+        <p style="color:#77BB77;margin-top:8px;font-style:italic;">A collection of web apps made with more enthusiasm than budget.</p>
+      </header>
+
       <hr style="border:none;border-top:1px solid #1A3A1A;margin:32px 0;" />
-      <p style="color:#77BB77;margin-bottom:8px;">Proyectos:</p>
-      <ul style="list-style:none;padding:0;color:#CCFFCC;line-height:2;">
-        <li><a href="https://elcodicedeltabernero.netlify.app/" style="color:#33FF33;">El Códice del Tabernero</a> — cifrado D&D</li>
-        <li><a href="https://losdadosdeltabernero.netlify.app/" style="color:#33FF33;">Los Dados del Tabernero</a> — lanzador 5e</li>
-        <li><a href="https://lodte-sala-de-mapas.onrender.com/" style="color:#33FF33;">Sala de Mapas</a> — mapas en vivo</li>
-      </ul>
-      <p style="color:#4A7A4A;margin-top:32px;">
-        <a href="https://ragustingarcia.com/" style="color:#33FF33;">← portfolio principal</a> ·
-        <a href="https://github.com/RodosCrappyWebEmpire" style="color:#33FF33;">GitHub</a>
-      </p>
-    </div>
+
+      <section>
+        <h2 style="color:#33FF33;font-family:monospace;letter-spacing:2px;">Sobre / About</h2>
+        <p style="color:#CCFFCC;line-height:1.8;margin-top:16px;">
+          RCWE es el lado experimental del portfolio de <a href="https://ragustingarcia.com/" style="color:#33FF33;">Rodolfo Agustín García</a>. Aquí viven proyectos lúdicos y experimentos. El foco actual son herramientas para el ecosistema de campañas D&amp;D <strong>LODTE — La Orden del Tabernero Errante</strong> (<a href="https://www.lodte.com.ar/" style="color:#33FF33;">lodte.com.ar</a>).
+        </p>
+        <p style="color:#77BB77;line-height:1.8;margin-top:16px;font-style:italic;">
+          RCWE is the experimental side of Rodolfo Agustín García's portfolio. Side projects and experiments live here. Current focus: tooling for the LODTE D&amp;D campaign ecosystem.
+        </p>
+      </section>
+
+      <hr style="border:none;border-top:1px solid #1A3A1A;margin:32px 0;" />
+
+      <section>
+        <h2 style="color:#33FF33;font-family:monospace;letter-spacing:2px;">Proyectos / Projects</h2>
+
+        <article style="margin-top:20px;padding-bottom:16px;border-bottom:1px solid #1A3A1A;">
+          <h3 style="color:#CCFFCC;margin-bottom:6px;">El Códice del Tabernero</h3>
+          <p style="color:#77BB77;line-height:1.7;">Herramienta de cifrado polialfabético para campañas de D&amp;D. Permite a dungeon masters crear mensajes codificados para sus jugadores. <em>Polyalphabetic cipher tool for D&amp;D campaigns. Dungeon masters create encoded messages for their players to decipher in-game.</em></p>
+          <p><a href="https://elcodicedeltabernero.netlify.app/" style="color:#33FF33;">elcodicedeltabernero.netlify.app →</a></p>
+        </article>
+
+        <article style="margin-top:20px;padding-bottom:16px;border-bottom:1px solid #1A3A1A;">
+          <h3 style="color:#CCFFCC;margin-bottom:6px;">Los Dados del Tabernero</h3>
+          <p style="color:#77BB77;line-height:1.7;">Lanzador de dados para D&amp;D 5e. Soporta notación estándar (1d20, 4d6kh3, etc.) con historial de tiradas. <em>D&amp;D 5e dice roller. Supports standard dice notation with rolling history.</em></p>
+          <p><a href="https://losdadosdeltabernero.netlify.app/" style="color:#33FF33;">losdadosdeltabernero.netlify.app →</a></p>
+        </article>
+
+        <article style="margin-top:20px;">
+          <h3 style="color:#CCFFCC;margin-bottom:6px;">Sala de Mapas</h3>
+          <p style="color:#77BB77;line-height:1.7;">Visor de mapas compartidos en tiempo real para sesiones de D&amp;D. Múltiples jugadores conectados ven el mismo mapa actualizado en vivo por el dungeon master. Stack: Flask + SocketIO + MongoDB. <em>Real-time shared map viewer for D&amp;D sessions. Stack: Flask + SocketIO + MongoDB.</em></p>
+          <p><a href="https://lodte-sala-de-mapas.onrender.com/" style="color:#33FF33;">lodte-sala-de-mapas.onrender.com →</a></p>
+        </article>
+      </section>
+
+      <hr style="border:none;border-top:1px solid #1A3A1A;margin:32px 0;" />
+
+      <section>
+        <h2 style="color:#33FF33;font-family:monospace;letter-spacing:2px;">También / Also</h2>
+        <p style="color:#CCFFCC;line-height:1.7;margin-top:16px;">
+          Parte de <a href="https://www.lodte.com.ar/" style="color:#33FF33;">La Orden del Tabernero Errante (LODTE)</a> — campañas y crónicas de D&amp;D. <em>Part of the LODTE D&amp;D ecosystem.</em>
+        </p>
+      </section>
+
+      <hr style="border:none;border-top:1px solid #1A3A1A;margin:32px 0;" />
+
+      <section>
+        <h2 style="color:#33FF33;font-family:monospace;letter-spacing:2px;">Links</h2>
+        <p style="color:#77BB77;margin-top:16px;">
+          <a href="https://ragustingarcia.com/" style="color:#33FF33;">← portfolio principal / main portfolio</a> ·
+          <a href="https://github.com/RodosCrappyWebEmpire" style="color:#33FF33;">GitHub</a>
+        </p>
+      </section>
+
+    </article>
   </noscript>
 
-  <script src="content/site-data.js?v=2026.05.04a"></script>
-  <script src="assets/js/app.js?v=2026.05.04a"></script>
+  <script src="content/site-data.js?v=2026.05.10"></script>
+  <script src="assets/js/app.js?v=2026.05.10"></script>
 
 </body>
 </html>
