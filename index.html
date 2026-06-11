@@ -36,6 +36,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" />
+  </noscript>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.ico" />
@@ -69,11 +74,12 @@
         "@id": "https://rcwe.ragustingarcia.com/#projects",
         "name": "Side projects in Rodo's Crappy Web Empire",
         "itemListOrder": "https://schema.org/ItemListUnordered",
-        "numberOfItems": 3,
+        "numberOfItems": 4,
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-codice" } },
           { "@type": "ListItem", "position": 2, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-dados" } },
-          { "@type": "ListItem", "position": 3, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-mapas" } }
+          { "@type": "ListItem", "position": 3, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-mapas" } },
+          { "@type": "ListItem", "position": 4, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-capsule" } }
         ]
       },
       {
@@ -106,18 +112,37 @@
         "operatingSystem": "Web",
         "author": { "@id": "https://ragustingarcia.com/#person" },
         "programmingLanguage": ["Python", "JavaScript"]
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://rcwe.ragustingarcia.com/#project-capsule",
+        "name": "CAPSULE",
+        "alternateName": "CAPSULE — Temporal Encrypted Capsules",
+        "description": "Time-locked encrypted letters. AES-256-GCM in the browser, downloadable .capsule file, and a server that custodies only the temporal fragment of the key (minimum 3 years lock). Three separate pieces: message + secret phrase + server fragment — nothing decrypts until the chosen date arrives.",
+        "url": "https://rcwe-capsule.netlify.app/",
+        "applicationCategory": "SecurityApplication",
+        "applicationSubCategory": "Cryptography",
+        "operatingSystem": "Web",
+        "author": { "@id": "https://ragustingarcia.com/#person" },
+        "featureList": "AES-256-GCM encryption, 600000 PBKDF2 iterations, time-locked decryption, one-shot mode, USB keyfile support, QR code sharing",
+        "programmingLanguage": "JavaScript"
       }
     ]
   }
   </script>
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.05.10b" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.05.10e" />
 
   <noscript>
     <style>body{background:#050A05;color:#CCFFCC;font-family:monospace;padding:40px;}</style>
   </noscript>
 </head>
 <body>
+
+  <!-- H1 visible para crawlers y lectores de pantalla, no para humanos. -->
+  <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
+    Rodo's Crappy Web Empire — Experimental web tools by Rodolfo Agustín García
+  </h1>
 
   <div id="app">
     <div style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#050A05;">
@@ -164,10 +189,16 @@
           <p><a href="https://losdadosdeltabernero.netlify.app/" style="color:#33FF33;">losdadosdeltabernero.netlify.app →</a></p>
         </article>
 
-        <article style="margin-top:20px;">
+        <article style="margin-top:20px;padding-bottom:16px;border-bottom:1px solid #1A3A1A;">
           <h3 style="color:#CCFFCC;margin-bottom:6px;">Sala de Mapas</h3>
           <p style="color:#77BB77;line-height:1.7;">Visor de mapas compartidos en tiempo real para sesiones de D&amp;D. Múltiples jugadores conectados ven el mismo mapa actualizado en vivo por el dungeon master. Stack: Flask + SocketIO + MongoDB. <em>Real-time shared map viewer for D&amp;D sessions. Stack: Flask + SocketIO + MongoDB.</em></p>
           <p><a href="https://lodte-sala-de-mapas.onrender.com/" style="color:#33FF33;">lodte-sala-de-mapas.onrender.com →</a></p>
+        </article>
+
+        <article style="margin-top:20px;">
+          <h3 style="color:#CCFFCC;margin-bottom:6px;">CAPSULE</h3>
+          <p style="color:#77BB77;line-height:1.7;">Cartas cifradas con bloqueo temporal. AES-256-GCM en el navegador, archivo .capsule descargable, y un servidor que custodia solo el fragmento temporal de la clave (mínimo 3 años). Nada se descifra hasta que llega la fecha elegida. <em>Time-locked encrypted letters. AES-256-GCM in the browser, downloadable .capsule file, and a server that custodies only the temporal fragment of the key. Nothing decrypts until the chosen date arrives.</em></p>
+          <p><a href="https://rcwe-capsule.netlify.app/" style="color:#33FF33;">rcwe-capsule.netlify.app →</a></p>
         </article>
       </section>
 
@@ -193,8 +224,8 @@
     </article>
   </noscript>
 
-  <script src="content/site-data.js?v=2026.05.10b"></script>
-  <script src="assets/js/app.js?v=2026.05.10b"></script>
+  <script src="content/site-data.js?v=2026.05.10e"></script>
+  <script src="assets/js/app.js?v=2026.05.10e"></script>
 
 </body>
 </html>

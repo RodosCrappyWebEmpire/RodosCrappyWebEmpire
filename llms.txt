@@ -32,6 +32,12 @@ Real-time shared map viewer for D&D sessions. Multiple players can connect and s
 - Link: https://lodte-sala-de-mapas.onrender.com/
 - Stack: Python, Flask, SocketIO, MongoDB, Cloudinary
 
+### CAPSULE
+Time-locked encrypted letters. AES-256-GCM in the browser, downloadable .capsule file, and a server that custodies only the temporal fragment of the key (minimum 3 years). Three separate pieces (message + secret phrase + server fragment) — nothing decrypts until the chosen date arrives. Features 600,000 PBKDF2 iterations, optional one-shot mode (capsule self-destructs after first read), and USB keyfile support.
+- Status: live
+- Link: https://rcwe-capsule.netlify.app/
+- Stack: Vanilla JavaScript, Web Crypto API (AES-256-GCM), PBKDF2
+
 ## Connection to main portfolio
 
 This site is part of [ragustingarcia.com](https://ragustingarcia.com/). The main portfolio shows production projects (commercial / professional); RCWE shows the experimental side (creative / playful). Both are made by the same person.
