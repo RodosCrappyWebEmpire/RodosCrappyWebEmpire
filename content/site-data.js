@@ -76,6 +76,19 @@ var SITE_DATA = {
       status: "live",
       featured: true,
     },
+    {
+      id: 4,
+      name: "CAPSULE",
+      url: "https://rcwe-capsule.netlify.app/",
+      repo: "",
+      desc: {
+        es: "Cartas cifradas que duermen hasta su fecha de apertura. AES-256-GCM en el navegador, archivo .capsule descargable, y un servidor que custodia solo el fragmento temporal de la clave (mínimo 3 años). Tres piezas separadas: mensaje + frase secreta + fragmento del servidor — nada se descifra hasta que el tiempo lo permite. 600.000 iteraciones PBKDF2, modo descartable opcional y soporte para keyfile en USB.",
+        en: "Encrypted letters that sleep until their opening date. AES-256-GCM in the browser, downloadable .capsule file, and a server that custodies only the temporal fragment of the key (minimum 3 years). Three separate pieces: message + secret phrase + server fragment — nothing decrypts until time allows. 600,000 PBKDF2 iterations, optional one-shot mode and USB keyfile support.",
+      },
+      tags: ["Crypto", "AES-256", "Time-lock", "Vanilla JS"],
+      status: "live",
+      featured: true,
+    },
     // ── Agregá más proyectos copiando este bloque: ──
     // {
     //   id: 4,
