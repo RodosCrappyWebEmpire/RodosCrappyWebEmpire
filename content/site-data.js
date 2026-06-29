@@ -176,19 +176,15 @@ var SITE_DATA = {
       project:     { es: "proyecto",  en: "project" },
       projects:    { es: "proyectos", en: "projects" },
       inEmpire:    { es: "en el imperio", en: "in the empire" },
-      addedNote: {
-        es: 'Para agregar un proyecto, editá content/site-data.js y copiá un bloque en "projects".',
-        en: 'To add a project, edit content/site-data.js and copy a block into "projects".',
-      },
       tagline:     { es: "Hecho con más entusiasmo que presupuesto.", en: "Made with more enthusiasm than budget." },
       readme:      { es: "$ cat README.md", en: "$ cat README.md" },
       whoami:      { es: "$ whoami",        en: "$ whoami" },
       links:       { es: "$ cat links.txt", en: "$ cat links.txt" },
       noProjects:  { es: "$ ls projects/",  en: "$ ls projects/" },
-      noProjectsHint: { es: "No hay proyectos todavía. Agregá uno en content/site-data.js", en: "No projects yet. Add one in content/site-data.js" },
+      noProjectsHint: { es: "No hay proyectos todavía.", en: "No projects yet." },
       footerNote: {
-        es: "// Sitio estático: HTML + CSS + JS vanilla.\n// Hosteado en GitHub Pages, gratis, sin frameworks.\n// Todo el contenido se edita desde content/site-data.js\n// Porque a veces lo simple es suficiente.",
-        en: "// Static site: HTML + CSS + vanilla JS.\n// Hosted on GitHub Pages, free, no frameworks.\n// All content lives in content/site-data.js\n// Because sometimes simple is enough.",
+        es: "// Sitio estático: HTML + CSS + JS vanilla.\n// Hosteado en GitHub Pages, gratis, sin frameworks.\n// Porque a veces lo simple es suficiente.",
+        en: "// Static site: HTML + CSS + vanilla JS.\n// Hosted on GitHub Pages, free, no frameworks.\n// Because sometimes simple is enough.",
       },
     },
     status: {
