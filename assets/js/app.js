@@ -225,7 +225,6 @@
     return '<div class="container" style="padding-top:80px;padding-bottom:60px;">' +
       sectionHeader(D.ui.sections.allTitle, sub) +
       cards +
-      '<p class="text-faint mt-3" style="font-size:12px;">' + esc(t(D.ui.misc.addedNote)) + '</p>' +
     '</div>';
   }
 
