@@ -1,6 +1,14 @@
+<p align="center">
+  <a href="https://rcwe.ragustingarcia.com/">
+    <img src="assets/og-image.png" alt="Rodo's Crappy Web Empire — side projects lab" width="100%" />
+  </a>
+</p>
+
 # Rodo's Crappy Web Empire
 
 > Una colección de aplicaciones web hechas con más entusiasmo que presupuesto.
+
+**🌐 [rcwe.ragustingarcia.com](https://rcwe.ragustingarcia.com/)** · El lado experimental del portfolio de **[Rodolfo Agustín García](https://ragustingarcia.com/)**. Foco actual: ecosistema **[LODTE](https://www.lodte.com.ar/)** (D&D) + experimentos.
 
 ---
 
@@ -15,6 +23,7 @@
 RodosCrappyWebEmpire/
 ├── index.html
 ├── 404.html
+├── .nojekyll                   ← desactiva el pipeline Jekyll en GitHub Pages
 ├── CNAME                       ← NO MODIFICAR
 ├── robots.txt                  ← reglas para crawlers
 ├── sitemap.xml                 ← lista de URLs para Google
@@ -66,6 +75,9 @@ Tools del ecosistema **[LODTE — La Orden del Tabernero Errante](https://www.lo
 | 🗝 **El Códice del Tabernero** | Cifrado polialfabético para D&D | [elcodicedeltabernero.netlify.app](https://elcodicedeltabernero.netlify.app/) |
 | 🎲 **Los Dados del Tabernero** | Lanzador de dados D&D 5e | [losdadosdeltabernero.netlify.app](https://losdadosdeltabernero.netlify.app/) |
 | 🗺️ **Sala de Mapas** | Mapas compartidos en tiempo real | [lodte-sala-de-mapas.onrender.com](https://lodte-sala-de-mapas.onrender.com/) |
+| 🔒 **CAPSULE** | Cartas cifradas con bloqueo temporal (AES-256) | [rcwe-capsule.netlify.app](https://rcwe-capsule.netlify.app/) |
+| 📜 **El Tabernero** | Registrador de sesiones de D&D 5e (local) | — |
+| 🫕 **El Caldero del Tabernero** | IA local: audio de sesión → relato (local) | — |
 
 ## Stack
 
@@ -85,7 +97,8 @@ Le dicen a Google qué indexar y dónde encontrarlo. Como el sitio es SPA (una s
 
 ### Otros elementos SEO
 
-- **JSON-LD** con `isPartOf` apuntando al portfolio principal (señal explícita a Google de que es parte del mismo ecosistema)
+- **JSON-LD** con `isPartOf` apuntando al portfolio principal (señal explícita a Google de que es parte del mismo ecosistema) + nodo `Person` propio para que `#person` resuelva en esta página
+- El patrón completo de atribución/SEO está en **[`ATRIBUCION-Y-SEO.md`](https://github.com/ragustingarcia/ragustingarcia.github.io/blob/main/ATRIBUCION-Y-SEO.md)** (en el repo del portfolio) — kit reutilizable de autoría + SEO/AEO
 - **Open Graph** (`og:image` 1200×630) + Twitter Card
 - **`canonical`** apuntando a `https://rcwe.ragustingarcia.com/`
 - **`<noscript>`** con lista de proyectos para crawlers sin JS

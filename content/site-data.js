@@ -89,6 +89,32 @@ var SITE_DATA = {
       status: "live",
       featured: true,
     },
+    {
+      id: 5,
+      name: "El Tabernero",
+      url: "",
+      repo: "",
+      desc: {
+        es: "Registrador y seguimiento de campañas de D&D 5e: personajes, sesiones y crónicas desde una UI local. Backend FastAPI + frontend vanilla. Graba el audio de la sesión para El Caldero. Corre en tu máquina, no requiere deploy.",
+        en: "D&D 5e campaign logger and tracker: characters, sessions and chronicles from a local UI. FastAPI backend + vanilla frontend. Records session audio for El Caldero. Runs locally, no deploy required.",
+      },
+      tags: ["FastAPI", "Vanilla JS", "D&D", "Local"],
+      status: "live",
+      featured: false,
+    },
+    {
+      id: 6,
+      name: "El Caldero del Tabernero",
+      url: "",
+      repo: "",
+      desc: {
+        es: "Toma el audio de tus sesiones de D&D (grabado por El Tabernero) y lo transmuta en relato: transcribe, diariza (separa voces) y reescribe en prosa con IA local. Pensado para sesiones de hasta ~4 horas mediante map-reduce.",
+        en: "Takes the audio from your D&D sessions (recorded by El Tabernero) and transmutes it into narrative: transcribes, diarizes (separates voices) and rewrites it as prose with local AI. Built for sessions up to ~4 hours via map-reduce.",
+      },
+      tags: ["IA local", "Transcripción", "Diarización", "D&D", "Python"],
+      status: "live",
+      featured: false,
+    },
     // ── Agregá más proyectos copiando este bloque: ──
     // {
     //   id: 4,

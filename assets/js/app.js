@@ -285,10 +285,10 @@
     };
     var descs = {
       es: { home: "Portfolio de proyectos web. Una colección hecha con más entusiasmo que presupuesto.",
-            projects: "Proyectos del imperio: El Códice, Los Dados y Sala de Mapas del Tabernero.",
+            projects: "Proyectos del imperio: herramientas del ecosistema LODTE (Códice, Dados, Sala de Mapas, Tabernero, Caldero) y CAPSULE.",
             about: "Rodolfo Agustín García — desarrollador, DM de D&D y constructor de herramientas web." },
       en: { home: "Web project portfolio. A collection made with more enthusiasm than budget.",
-            projects: "Empire projects: El Códice, Los Dados and Sala de Mapas del Tabernero.",
+            projects: "Empire projects: LODTE ecosystem tools (Códice, Dados, Sala de Mapas, Tabernero, Caldero) and CAPSULE.",
             about: "Rodolfo Agustín García — developer, D&D DM and builder of web tools." }
     };
     var lang = currentLang in titles ? currentLang : "es";
