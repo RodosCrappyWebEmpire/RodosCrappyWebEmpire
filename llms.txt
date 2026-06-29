@@ -38,6 +38,16 @@ Time-locked encrypted letters. AES-256-GCM in the browser, downloadable .capsule
 - Link: https://rcwe-capsule.netlify.app/
 - Stack: Vanilla JavaScript, Web Crypto API (AES-256-GCM), PBKDF2
 
+### El Tabernero
+Local D&D 5e campaign logger and tracker: characters, sessions and chronicles from a local web UI. Records session audio that El Caldero later processes. Runs locally, no public deploy.
+- Status: live (local tool)
+- Stack: Python, FastAPI, vanilla JavaScript
+
+### El Caldero del Tabernero
+Local AI module that turns D&D session audio (recorded by El Tabernero) into narrative: transcribes, diarizes (separates speakers) and rewrites it as prose. Built for sessions up to ~4 hours via a map-reduce pipeline. Runs locally.
+- Status: live (local tool)
+- Stack: Python, local AI (transcription + diarization + LLM rewrite)
+
 ## Connection to main portfolio
 
 This site is part of [ragustingarcia.com](https://ragustingarcia.com/). The main portfolio shows production projects (commercial / professional); RCWE shows the experimental side (creative / playful). Both are made by the same person.
