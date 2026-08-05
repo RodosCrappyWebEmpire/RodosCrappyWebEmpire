@@ -48,6 +48,11 @@ Local AI module that turns D&D session audio (recorded by El Tabernero) into nar
 - Status: live (local tool)
 - Stack: Python, local AI (transcription + diarization + LLM rewrite)
 
+### El Escriba
+Instrument tuner with real-time pitch detection and an audio visualizer. It reads the microphone, computes the fundamental frequency and shows which note is being played and how far off it is. Runs entirely in the browser with the Web Audio API, nothing to install.
+- Status: live (local tool)
+- Stack: Vanilla JavaScript, Web Audio API
+
 ## Connection to main portfolio
 
 This site is part of [ragustingarcia.com](https://ragustingarcia.com/). The main portfolio shows production projects (commercial / professional); RCWE shows the experimental side (creative / playful). Both are made by the same person.

@@ -276,19 +276,19 @@
   function updateMeta() {
     var titles = {
       es: { home: "Rodo's Crappy Web Empire",
-            projects: "Proyectos — RCWE",
-            about: "Acerca de — RCWE" },
+            projects: "Proyectos | RCWE",
+            about: "Acerca de | RCWE" },
       en: { home: "Rodo's Crappy Web Empire",
-            projects: "Projects — RCWE",
-            about: "About — RCWE" }
+            projects: "Projects | RCWE",
+            about: "About | RCWE" }
     };
     var descs = {
       es: { home: "Portfolio de proyectos web. Una colección hecha con más entusiasmo que presupuesto.",
             projects: "Proyectos del imperio: herramientas del ecosistema LODTE (Códice, Dados, Sala de Mapas, Tabernero, Caldero) y CAPSULE.",
-            about: "Rodolfo Agustín García — desarrollador, DM de D&D y constructor de herramientas web." },
+            about: "Rodolfo Agustín García | desarrollador, DM de D&D y constructor de herramientas web." },
       en: { home: "Web project portfolio. A collection made with more enthusiasm than budget.",
             projects: "Empire projects: LODTE ecosystem tools (Códice, Dados, Sala de Mapas, Tabernero, Caldero) and CAPSULE.",
-            about: "Rodolfo Agustín García — developer, D&D DM and builder of web tools." }
+            about: "Rodolfo Agustín García | developer, D&D DM and builder of web tools." }
     };
     var lang = currentLang in titles ? currentLang : "es";
     document.title = titles[lang][currentPage] || titles[lang].home;

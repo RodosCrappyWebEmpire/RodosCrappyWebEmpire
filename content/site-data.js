@@ -115,6 +115,19 @@ var SITE_DATA = {
       status: "live",
       featured: false,
     },
+    {
+      id: 7,
+      name: "El Escriba",
+      url: "",
+      repo: "",
+      desc: {
+        es: "Afinador de instrumentos con detección de pitch en tiempo real y visualizador de audio. Toma el micrófono, calcula la frecuencia fundamental y muestra qué nota estás tocando y cuánto te desviás. Corre entero en el navegador, sin instalar nada.",
+        en: "Instrument tuner with real-time pitch detection and an audio visualizer. It takes the microphone, works out the fundamental frequency and shows which note you're playing and how far off you are. Runs entirely in the browser, nothing to install.",
+      },
+      tags: ["Web Audio API", "Pitch detection", "Vanilla JS", "Música"],
+      status: "live",
+      featured: false,
+    },
     // ── Agregá más proyectos copiando este bloque: ──
     // {
     //   id: 4,

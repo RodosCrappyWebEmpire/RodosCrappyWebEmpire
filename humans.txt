@@ -1,0 +1,17 @@
+/* TEAM */
+Developer: Rodolfo Agustín García
+Site: https://ragustingarcia.com/
+Lab: https://rcwe.ragustingarcia.com/
+GitHub: https://github.com/ragustingarcia
+GitHub Org: https://github.com/RodosCrappyWebEmpire
+Location: Tigre, Buenos Aires, AR
+
+/* SITE */
+Standards: HTML5, CSS3, ES2022
+Components: JS vanilla, sin frameworks, sin build step
+Software: GitHub Pages, Cloudflare DNS
+Language: Español / English
+Doctype: HTML5
+
+/* THANKS */
+Hecho con más entusiasmo que presupuesto.

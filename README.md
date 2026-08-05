@@ -78,6 +78,7 @@ Tools del ecosistema **[LODTE — La Orden del Tabernero Errante](https://www.lo
 | 🔒 **CAPSULE** | Cartas cifradas con bloqueo temporal (AES-256) | [rcwe-capsule.netlify.app](https://rcwe-capsule.netlify.app/) |
 | 📜 **El Tabernero** | Registrador de sesiones de D&D 5e (local) | — |
 | 🫕 **El Caldero del Tabernero** | IA local: audio de sesión → relato (local) | — |
+| 🎻 **El Escriba** | Afinador con detección de pitch en el navegador | — |
 
 ## Stack
 
