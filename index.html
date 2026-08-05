@@ -2,6 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <!-- Built by Rodolfo Agustín García | https://ragustingarcia.com/ -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#050A05" />
 
@@ -82,14 +83,15 @@
         "@id": "https://rcwe.ragustingarcia.com/#projects",
         "name": "Side projects in Rodo's Crappy Web Empire",
         "itemListOrder": "https://schema.org/ItemListUnordered",
-        "numberOfItems": 6,
+        "numberOfItems": 7,
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-codice" } },
           { "@type": "ListItem", "position": 2, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-dados" } },
           { "@type": "ListItem", "position": 3, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-mapas" } },
           { "@type": "ListItem", "position": 4, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-capsule" } },
           { "@type": "ListItem", "position": 5, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-tabernero" } },
-          { "@type": "ListItem", "position": 6, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-caldero" } }
+          { "@type": "ListItem", "position": 6, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-caldero" } },
+          { "@type": "ListItem", "position": 7, "item": { "@id": "https://rcwe.ragustingarcia.com/#project-escriba" } }
         ]
       },
       {
@@ -156,12 +158,23 @@
         "operatingSystem": "Local",
         "author": { "@id": "https://ragustingarcia.com/#person" },
         "programmingLanguage": "Python"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://rcwe.ragustingarcia.com/#project-escriba",
+        "name": "El Escriba",
+        "description": "Instrument tuner with real-time pitch detection and an audio visualizer. It reads the microphone, computes the fundamental frequency and shows which note is being played and how far off it is. Runs entirely in the browser with the Web Audio API.",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web",
+        "author": { "@id": "https://ragustingarcia.com/#person" },
+        "creator": { "@id": "https://ragustingarcia.com/#person" },
+        "programmingLanguage": "JavaScript"
       }
     ]
   }
   </script>
 
-  <link rel="stylesheet" href="/assets/css/styles.css?v=2026.06.29b" />
+  <link rel="stylesheet" href="/assets/css/styles.css?v=2026.08.05a" />
 
   <noscript>
     <style>body{background:#050A05;color:#CCFFCC;font-family:monospace;padding:40px;}</style>
@@ -235,6 +248,11 @@
           <h3 style="color:#CCFFCC;margin-bottom:6px;">El Caldero del Tabernero <span style="color:#77BB77;font-weight:normal;font-size:13px;">— local</span></h3>
           <p style="color:#77BB77;line-height:1.7;">Toma el audio de tus sesiones de D&amp;D (grabado por El Tabernero) y lo transmuta en relato: transcribe, diariza (separa voces) y reescribe en prosa con IA local. Pensado para sesiones de hasta ~4 horas (map-reduce). <em>Local AI: transcribes, diarizes and rewrites D&amp;D session audio into narrative prose.</em></p>
         </article>
+
+        <article style="margin-top:20px;">
+          <h3 style="color:#CCFFCC;margin-bottom:6px;">El Escriba</h3>
+          <p style="color:#77BB77;line-height:1.7;">Afinador de instrumentos con detección de pitch en tiempo real y visualizador de audio. Toma el micrófono, calcula la frecuencia fundamental y muestra qué nota estás tocando y cuánto te desviás. Corre entero en el navegador con la Web Audio API. <em>Instrument tuner with real-time pitch detection and an audio visualizer, running entirely in the browser.</em></p>
+        </article>
       </section>
 
       <hr style="border:none;border-top:1px solid #1A3A1A;margin:32px 0;" />
@@ -259,8 +277,8 @@
     </article>
   </noscript>
 
-  <script src="/content/site-data.js?v=2026.06.29b"></script>
-  <script src="/assets/js/app.js?v=2026.06.29b"></script>
+  <script src="/content/site-data.js?v=2026.08.05a"></script>
+  <script src="/assets/js/app.js?v=2026.08.05a"></script>
 
 </body>
 </html>
