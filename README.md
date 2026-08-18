@@ -139,4 +139,20 @@ Parte de **[La Orden del Tabernero Errante](https://www.lodte.com.ar/)** — cam
 
 ⚠️ **No modificar ni eliminar `CNAME`** — conecta el repo con `rcwe.ragustingarcia.com` vía Cloudflare.
 
+---
+
+## Licencia
+
+**Software propietario** | todos los derechos reservados. Ver [LICENSE](./LICENSE).
+
+El repo es público para mostrar el trabajo, no para reutilizarlo: que el código esté a la
+vista no es una licencia para copiarlo. Usar el sitio publicado, en cambio, es libre.
+
+Los proyectos que el sitio muestra viven en sus propios repositorios y tienen sus propias
+licencias; las herramientas de LODTE pertenecen a ese colectivo.
+
+© 2026 Rodolfo Agustín García | [ragustingarcia.com](https://ragustingarcia.com/)
+
+---
+
 *Hecho con más entusiasmo que presupuesto.*
