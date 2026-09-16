@@ -109,7 +109,7 @@
         '<div class="navbar-links">' + dsk + '</div>' +
         '<div class="navbar-right">' +
           langToggle +
-          '<button class="navbar-mobile-btn" id="mobile-toggle" aria-label="Menu">[=]</button>' +
+          '<button type="button" class="navbar-mobile-btn" id="mobile-toggle" aria-label="Menu" aria-controls="mobile-menu" aria-expanded="false">[=]</button>' +
         '</div>' +
       '</div>' +
       '<div class="navbar-mobile-menu' + (mobileMenuOpen ? ' open' : '') + '" id="mobile-menu">' + mob + '</div>' +
@@ -318,6 +318,8 @@
         mobileMenuOpen = !mobileMenuOpen;
         var m = document.getElementById("mobile-menu");
         if (m) m.classList.toggle("open", mobileMenuOpen);
+        // Sin esto un lector de pantalla no sabe si el menú está abierto.
+        this.setAttribute("aria-expanded", mobileMenuOpen ? "true" : "false");
         this.textContent = mobileMenuOpen ? "[x]" : "[=]";
       });
     }
